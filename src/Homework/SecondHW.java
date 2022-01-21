@@ -56,25 +56,27 @@ public class SecondHW {
     }
 
     public static boolean checkPositiveInt( int a ) {
-        return a >= 0;
+        return a <= 0;
     }
 
-
-    public static String doFive(String name, int a) {
-        System.out.println(name);
-        int i = 1;
-        do {
-            System.out.println(name);
-            i++;
-        } while (i < a);
-        return name;
+    public static void doFive(String name, int a) {
+        for (int i = 1; i <= a; i++) {
+            System.out.println("String #" + i + ": " + name);
+        }
     }
-    //    долго пытался это задание решить черец цикл for но никак не получалось, в Гугле не всё ещё понятно.
-    //    решил проблему через цикл do while
-    //    вопрос, возможно ли сделать метод который возвращает строку n количество раз через цикл for?
+// wrong code
+//    public static String doFive(String name, int a) {
+//        System.out.println(name);
+//        int i = 1;
+//        do {
+//            System.out.println(name);
+//            i++;
+//        } while (i < a);
+//        return name;
+//    }
+
     static boolean checkYear(int year) {
         return (((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0));
     }
-    //        Сказать честно я бы сам не додумался если бы не "О великий Гугл".
 }
-// если вы отвечали на мой вопрос на 3 уроке то не отвечайте я посмотрю узнаю. еще не смотрел урок.
+
