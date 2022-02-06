@@ -26,5 +26,8 @@ public class SixthHW {
         System.out.println("Всего собак создано: " + (Dogs.getCount()));
         System.out.println("Всего животных создано: " + (Animals.getCount()));
 
+
+
+
     }
 }
