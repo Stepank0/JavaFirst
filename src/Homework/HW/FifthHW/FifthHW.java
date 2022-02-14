@@ -1,6 +1,4 @@
-package Homework.FifthHW;
-
-import java.util.Arrays;
+package Homework.HW.FifthHW;
 
 public class FifthHW {
 

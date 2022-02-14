@@ -1,4 +1,4 @@
-package Homework;
+package Homework.HW;
 
 public class SecondHW {
     public static void main (String[] arge) {

@@ -1,4 +1,4 @@
-package Homework;
+package Homework.HW;
 
 public class EighthHW {
 }

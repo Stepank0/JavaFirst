@@ -1,4 +1,4 @@
-package Homework.SixthHW;
+package Homework.HW.SixthHW;
 
 public abstract class Animals {
 

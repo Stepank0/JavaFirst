@@ -1,4 +1,4 @@
-package Homework.SeventhHW;
+package Homework.HW.SeventhHW;
 
 import javax.swing.*;
 import java.awt.*;

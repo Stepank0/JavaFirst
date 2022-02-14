@@ -1,4 +1,4 @@
-package Homework.MyPractice;
+package Homework.HW.MyPractice;
 
 import java.awt.*;
 import java.awt.event.*;

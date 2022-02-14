@@ -1,4 +1,4 @@
-package Homework.SixthHW;
+package Homework.HW.SixthHW;
 
     public class Dogs extends Animals {
 

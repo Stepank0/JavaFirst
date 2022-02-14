@@ -1,6 +1,4 @@
-package Homework.SeventhHW;
-
-import java.util.Arrays;
+package Homework.HW.SeventhHW;
 
 public class Runer {
 
