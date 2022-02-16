@@ -63,12 +63,13 @@ public class Algorithm {
             nums6[i] = random.nextInt(100);
         }
         System.out.println(Arrays.toString(nums6));
-        selectionSort(nums6);
-        System.out.println(Arrays.toString(nums6));
-//        System.out.println(searchLinear(nums6, 99));
+//        selectionSort(nums6);
+//        System.out.println(Arrays.toString(nums6));
+////        System.out.println(searchLinear(nums6, 99));
 
 
         System.out.println(binarySearch(nums6, 75)) ;
+        System.out.println( searchLinear(nums6, 75));
 
 
 
@@ -176,34 +177,6 @@ public class Algorithm {
             return -1;
     }
 
-//    public static int binarySearch (int[] array, int elementToSearch) {
-//
-//        int firstIndex =0;
-//        int lastIndex = array.length-1;
-//
-//        while (firstIndex <= lastIndex) {
-//            int middleIndex = (firstIndex + lastIndex) / 2;
-//
-//            if(array[middleIndex] == elementToSearch) {
-//                return middleIndex;
-//            }
-//
-//            else if(array[middleIndex] < elementToSearch ) {
-//                firstIndex = middleIndex + 1;
-//
-//            }
-//
-//            else if (array[middleIndex] > elementToSearch ) {
-//                lastIndex = middleIndex - 1;
-//
-//            }
-//
-//
-//        }
-//
-//
-//        return  -1;
-//    }
 
 
         public static int binarySearch (int[] array, int elementToSearch) {
