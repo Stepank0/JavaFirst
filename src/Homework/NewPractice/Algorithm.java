@@ -13,6 +13,7 @@ public class Algorithm {
         double[] nums = {3.2, 4.2,5.8,4.6,1.2,7.1};
         double[] nums2 = {3.2, 4.2,5.8,4.6,1.2,7.1,1.2,9.8,5.7};
         int[] nums3 = { 1, 2,3,4,5,6,7,8};
+        int[] nums33 = { 1, 2,3,4,5,6,7,8};
         int[] nums4 = { 8, 1, 3,0, 9, 4, 7, 2, 5, 6};
         int[][] nums5 = {
                 {0,1},
@@ -20,6 +21,12 @@ public class Algorithm {
                 {4,2,1,3},
                 {3,5,2,4,1}
         };
+
+        System.out.println("==   >" + (nums3 == nums33));
+
+        System.out.println(nums3.equals(nums33));
+
+
 //        System.out.println("---------------------------");
 //
 //        arithmeticMean(nums);
@@ -56,20 +63,22 @@ public class Algorithm {
 //
 //        System.out.println( searchLinear(nums4, 3));
 //        System.out.println("---------------------------");
-
-        int[] nums6 = new int[100];
-        Random random = new Random();
-        for ( int i =0 ; i<nums6.length;i++) {
-            nums6[i] = random.nextInt(100);
-        }
-        System.out.println(Arrays.toString(nums6));
+//
+//        int[] nums6 = new int[100];
+//        Random random = new Random();
+//        for ( int i =0 ; i<nums6.length;i++) {
+//            nums6[i] = random.nextInt(100);
+//        }
+//        System.out.println(Arrays.toString(nums6));
 //        selectionSort(nums6);
+//        Arrays.parallelSort(nums6);
+//        System.out.println( Arrays.binarySearch(nums6, 66));
 //        System.out.println(Arrays.toString(nums6));
 ////        System.out.println(searchLinear(nums6, 99));
 
 
-        System.out.println(binarySearch(nums6, 75)) ;
-        System.out.println( searchLinear(nums6, 75));
+//        System.out.println(binarySearch(nums6, 75)) ;
+//        System.out.println( searchLinear(nums6, 75));
 
 
 
@@ -83,6 +92,12 @@ public class Algorithm {
 
     }
 
+
+
+    @Override
+    public boolean equals(Object obj) {
+        return super.equals(obj);
+    }
 
     public static void infoArraySelection (int[] array) {
         System.out.println(Arrays.toString(array));
