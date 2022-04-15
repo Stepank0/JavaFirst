@@ -12,5 +12,8 @@ public class Main {
         Ivan.move();
         Ivan.talk();
         Diman.move();
+
+
+
     }
 }
