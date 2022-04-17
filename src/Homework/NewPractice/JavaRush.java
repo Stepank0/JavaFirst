@@ -10,27 +10,42 @@ public class JavaRush {
     
     public static void main(String[] args) {
 
+        Scanner scan = new Scanner(System.in);
 
-
-
-
-
-
-
-//        Scanner scan = new Scanner(System.in);
-//
-        int height=0;
-        while (height < 10) {
-            int width = 0;
-            while(width < 10){
-                System.out.print("Q");
-                width++;
-
-            }
-
-            System.out.println();
-            height++;
+        boolean isExit = false;
+        String word = null;
+        while(!isExit){
+            word = scan.nextLine();
+            if(word.equals("enough"))break;
+            System.out.println(word);
         }
+
+
+
+
+
+
+
+
+
+
+//        int height=1;
+//        while (height <= 10) {
+//            int width = 1;
+//            while(width <= 20){
+//
+//                if(height == 1 || height == 10) {
+//                    System.out.print("Б");
+//                } else if (width == 1 || width == 20) {
+//                    System.out.print("Б");
+//                } else {
+//                    System.out.print(" ");
+//                }
+//                width++;
+//            }
+//            height++;
+//            System.out.println();
+//        }
 
 
 //        boolean inEnter = false;

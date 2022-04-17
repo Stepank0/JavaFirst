@@ -1,5 +1,7 @@
 package Homework.NewPractice.JSON.Try2.Response;
 
+
+
 import java.util.HashMap;
 import java.util.Map;
 import javax.annotation.Generated;
@@ -12,16 +14,16 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
-        "Metric",
-        "Imperial"
+        "Minimum",
+        "Maximum"
 })
 @Generated("jsonschema2pojo")
 public class Temperature {
 
-    @JsonProperty("Metric")
-    private Metric metric;
-    @JsonProperty("Imperial")
-    private Imperial imperial;
+    @JsonProperty("Minimum")
+    private Minimum minimum;
+    @JsonProperty("Maximum")
+    private Maximum maximum;
     @JsonIgnore
     private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
@@ -34,33 +36,33 @@ public class Temperature {
 
     /**
      *
-     * @param metric
-     * @param imperial
+     * @param maximum
+     * @param minimum
      */
-    public Temperature(Metric metric, Imperial imperial) {
+    public Temperature(Minimum minimum, Maximum maximum) {
         super();
-        this.metric = metric;
-        this.imperial = imperial;
+        this.minimum = minimum;
+        this.maximum = maximum;
     }
 
-    @JsonProperty("Metric")
-    public Metric getMetric() {
-        return metric;
+    @JsonProperty("Minimum")
+    public Minimum getMinimum() {
+        return minimum;
     }
 
-    @JsonProperty("Metric")
-    public void setMetric(Metric metric) {
-        this.metric = metric;
+    @JsonProperty("Minimum")
+    public void setMinimum(Minimum minimum) {
+        this.minimum = minimum;
     }
 
-    @JsonProperty("Imperial")
-    public Imperial getImperial() {
-        return imperial;
+    @JsonProperty("Maximum")
+    public Maximum getMaximum() {
+        return maximum;
     }
 
-    @JsonProperty("Imperial")
-    public void setImperial(Imperial imperial) {
-        this.imperial = imperial;
+    @JsonProperty("Maximum")
+    public void setMaximum(Maximum maximum) {
+        this.maximum = maximum;
     }
 
     @JsonAnyGetter
@@ -73,28 +75,104 @@ public class Temperature {
         this.additionalProperties.put(name, value);
     }
 
-    @Override
-    public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append(Temperature.class.getName()).append('@').append(Integer.toHexString(System.identityHashCode(this))).append('[');
-        sb.append("metric");
-        sb.append('=');
-        sb.append(((this.metric == null)?"<null>":this.metric));
-        sb.append(',');
-        sb.append("imperial");
-        sb.append('=');
-        sb.append(((this.imperial == null)?"<null>":this.imperial));
-        sb.append(',');
-        sb.append("additionalProperties");
-        sb.append('=');
-        sb.append(((this.additionalProperties == null)?"<null>":this.additionalProperties));
-        sb.append(',');
-        if (sb.charAt((sb.length()- 1)) == ',') {
-            sb.setCharAt((sb.length()- 1), ']');
-        } else {
-            sb.append(']');
-        }
-        return sb.toString();
-    }
-
 }
+
+
+//import java.util.HashMap;
+//import java.util.Map;
+//import javax.annotation.Generated;
+//import com.fasterxml.jackson.annotation.JsonAnyGetter;
+//import com.fasterxml.jackson.annotation.JsonAnySetter;
+//import com.fasterxml.jackson.annotation.JsonIgnore;
+//import com.fasterxml.jackson.annotation.JsonInclude;
+//import com.fasterxml.jackson.annotation.JsonProperty;
+//import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+//
+//@JsonInclude(JsonInclude.Include.NON_NULL)
+//@JsonPropertyOrder({
+//        "Metric",
+//        "Imperial"
+//})
+//@Generated("jsonschema2pojo")
+//public class Temperature {
+//
+//    @JsonProperty("Metric")
+//    private Metric metric;
+//    @JsonProperty("Imperial")
+//    private Imperial imperial;
+//    @JsonIgnore
+//    private Map<String, Object> additionalProperties = new HashMap<String, Object>();
+//
+//    /**
+//     * No args constructor for use in serialization
+//     *
+//     */
+//    public Temperature() {
+//    }
+//
+//    /**
+//     *
+//     * @param metric
+//     * @param imperial
+//     */
+//    public Temperature(Metric metric, Imperial imperial) {
+//        super();
+//        this.metric = metric;
+//        this.imperial = imperial;
+//    }
+//
+//    @JsonProperty("Metric")
+//    public Metric getMetric() {
+//        return metric;
+//    }
+//
+//    @JsonProperty("Metric")
+//    public void setMetric(Metric metric) {
+//        this.metric = metric;
+//    }
+//
+//    @JsonProperty("Imperial")
+//    public Imperial getImperial() {
+//        return imperial;
+//    }
+//
+//    @JsonProperty("Imperial")
+//    public void setImperial(Imperial imperial) {
+//        this.imperial = imperial;
+//    }
+//
+//    @JsonAnyGetter
+//    public Map<String, Object> getAdditionalProperties() {
+//        return this.additionalProperties;
+//    }
+//
+//    @JsonAnySetter
+//    public void setAdditionalProperty(String name, Object value) {
+//        this.additionalProperties.put(name, value);
+//    }
+//
+//    @Override
+//    public String toString() {
+//        StringBuilder sb = new StringBuilder();
+//        sb.append(Temperature.class.getName()).append('@').append(Integer.toHexString(System.identityHashCode(this))).append('[');
+//        sb.append("metric");
+//        sb.append('=');
+//        sb.append(((this.metric == null)?"<null>":this.metric));
+//        sb.append(',');
+//        sb.append("imperial");
+//        sb.append('=');
+//        sb.append(((this.imperial == null)?"<null>":this.imperial));
+//        sb.append(',');
+//        sb.append("additionalProperties");
+//        sb.append('=');
+//        sb.append(((this.additionalProperties == null)?"<null>":this.additionalProperties));
+//        sb.append(',');
+//        if (sb.charAt((sb.length()- 1)) == ',') {
+//            sb.setCharAt((sb.length()- 1), ']');
+//        } else {
+//            sb.append(']');
+//        }
+//        return sb.toString();
+//    }
+//
+//}

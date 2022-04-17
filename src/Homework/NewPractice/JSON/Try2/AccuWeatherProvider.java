@@ -1,5 +1,6 @@
 package Homework.NewPractice.JSON.Try2;
 //import Homework.NewPractice.JSON.Try2.Response.DailyForecast;
+import Homework.NewPractice.JSON.Try2.Response.Temperature;
 import Homework.NewPractice.JSON.Try2.Response.WeatherResponse;
 import Homework.NewPractice.JSON.Try2.enums.Periods;
 import com.fasterxml.jackson.databind.DeserializationFeature;
@@ -51,8 +52,8 @@ public class AccuWeatherProvider implements WeatherProvider {
                     .url(url)
                     .build();
 
-//            Response response = client.newCall(request).execute();
-//            System.out.println(response.body().string());
+            Response response = client.newCall(request).execute();
+            System.out.println(response.body().string());
 
 
 
@@ -62,7 +63,12 @@ public class AccuWeatherProvider implements WeatherProvider {
             StringReader reader = new StringReader(jsonResponse);
 
             WeatherResponse weatherResponse = objectMapper.readValue(reader, WeatherResponse.class);
-            System.out.println(weatherResponse.toString());
+            String result = weatherResponse.toString();
+            //так показывает json
+            System.out.println(result);
+            System.out.println("====================");
+
+            showWeather(weatherResponse);
 
 
 
@@ -88,22 +94,41 @@ public class AccuWeatherProvider implements WeatherProvider {
                     .url(url)
                     .build();
 
-//            Response response = client.newCall(request).execute();
-//            System.out.println(response.body().string());
+            Response response = client.newCall(request).execute();
+            System.out.println(response.body().string());
+            System.out.println("---------------------");
 
             String jsonResponse = client.newCall(request).execute().body().string();
+            System.out.println(jsonResponse);
+            System.out.println("---------------------");
+
             ObjectMapper objectMapper = new ObjectMapper();
             StringReader reader = new StringReader(jsonResponse);
-
             WeatherResponse weatherResponse = objectMapper.readValue(reader, WeatherResponse.class);
 
-            String result = weatherResponse.toString();
-            System.out.println(result);
-//
-//            System.out.println(weatherResponse.toString());
+            showWeather(weatherResponse);
+
 
 
         }
+    }
+
+    public static void showWeather(WeatherResponse weatherResponse) {
+        String selectedCity = ApplicationGlobalState.getInstance().getSelectedCity();
+
+        weatherResponse.getDailyForecasts().forEach(e->{
+            String date = e.getDate();
+            if(date.equals(e.getDate())) {
+                System.out.println("-----------------------------------------");
+                System.out.println("city : " + selectedCity );
+                System.out.println("data: " + e.getDate());
+                System.out.println("temperature max: " + e.getTemperature().getMaximum().getValue());
+                System.out.println("temperature min: " + e.getTemperature().getMinimum().getValue());
+                System.out.println(" day : " + e.getDay().getIconPhrase());
+                System.out.println(" night : " + e.getNight().getIconPhrase());
+                System.out.println("------------------------------------------");
+            }
+        });
     }
 
     public String detectCityKey() throws IOException {
@@ -142,4 +167,5 @@ public class AccuWeatherProvider implements WeatherProvider {
 
         return objectMapper.readTree(jsonResponse).get(0).at("/Key").asText();
     }
+
 }

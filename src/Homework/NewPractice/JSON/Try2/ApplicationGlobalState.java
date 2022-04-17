@@ -4,7 +4,7 @@ public final class ApplicationGlobalState {
 
     private static ApplicationGlobalState INSTANCE;
     private String selectedCity = null;
-    private final String API_KEY = "B86HnMDQAOONc9louQAVKuVoVpoBzgfn";
+    private final String API_KEY = "BmKTX3bWs8Y0py0dR6s9tBuVRx0gRZM6";
 
     private ApplicationGlobalState() {
     }
