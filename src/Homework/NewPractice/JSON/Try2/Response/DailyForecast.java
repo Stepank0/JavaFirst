@@ -5,12 +5,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import javax.annotation.Generated;
-import com.fasterxml.jackson.annotation.JsonAnyGetter;
-import com.fasterxml.jackson.annotation.JsonAnySetter;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+
+import com.fasterxml.jackson.annotation.*;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
@@ -23,7 +19,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
         "MobileLink",
         "Link"
 })
-@Generated("jsonschema2pojo")
+//@Generated("jsonschema2pojo")
 public class DailyForecast {
 
     @JsonProperty("Date")
@@ -31,7 +27,7 @@ public class DailyForecast {
     @JsonProperty("EpochDate")
     private Integer epochDate;
     @JsonProperty("Temperature")
-    private Temperature temperature;
+    private Temperature5days temperature;
     @JsonProperty("Day")
     private Day day;
     @JsonProperty("Night")
@@ -45,34 +41,9 @@ public class DailyForecast {
     @JsonIgnore
     private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
-    /**
-     * No args constructor for use in serialization
-     *
-     */
-    public DailyForecast() {
-    }
-
-    /**
-     *
-     * @param date
-     * @param sources
-     * @param epochDate
-     * @param night
-     * @param temperature
-     * @param link
-     * @param day
-     * @param mobileLink
-     */
-    public DailyForecast(String date, Integer epochDate, Temperature temperature, Day day, Night night, List<String> sources, String mobileLink, String link) {
-        super();
-        this.date = date;
-        this.epochDate = epochDate;
-        this.temperature = temperature;
-        this.day = day;
-        this.night = night;
-        this.sources = sources;
-        this.mobileLink = mobileLink;
-        this.link = link;
+    @Override
+    public String toString() {
+        return date.substring(0, 10) + " ожидается ночью: " + night.getIconPhrase() + ", днём: " + day.getIconPhrase() + ", " + temperature;
     }
 
     @JsonProperty("Date")
@@ -96,12 +67,12 @@ public class DailyForecast {
     }
 
     @JsonProperty("Temperature")
-    public Temperature getTemperature() {
+    public Temperature5days getTemperature() {
         return temperature;
     }
 
     @JsonProperty("Temperature")
-    public void setTemperature(Temperature temperature) {
+    public void setTemperature(Temperature5days temperature) {
         this.temperature = temperature;
     }
 
@@ -168,18 +139,7 @@ public class DailyForecast {
 }
 
 
-//
-//
-//import java.util.HashMap;
-//import java.util.List;
-//import java.util.Map;
-////import javax.annotation.Generated;
-//import com.fasterxml.jackson.annotation.JsonAnyGetter;
-//import com.fasterxml.jackson.annotation.JsonAnySetter;
-//import com.fasterxml.jackson.annotation.JsonIgnore;
-//import com.fasterxml.jackson.annotation.JsonInclude;
-//import com.fasterxml.jackson.annotation.JsonProperty;
-//import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+
 //
 //@JsonInclude(JsonInclude.Include.NON_NULL)
 //@JsonPropertyOrder({
@@ -192,7 +152,7 @@ public class DailyForecast {
 //        "MobileLink",
 //        "Link"
 //})
-////@Generated("jsonschema2pojo")
+//@Generated("jsonschema2pojo")
 //public class DailyForecast {
 //
 //    @JsonProperty("Date")
@@ -213,6 +173,36 @@ public class DailyForecast {
 //    private String link;
 //    @JsonIgnore
 //    private Map<String, Object> additionalProperties = new HashMap<String, Object>();
+//
+//    /**
+//     * No args constructor for use in serialization
+//     *
+//     */
+//    public DailyForecast() {
+//    }
+//
+//    /**
+//     *
+//     * @param date
+//     * @param sources
+//     * @param epochDate
+//     * @param night
+//     * @param temperature
+//     * @param link
+//     * @param day
+//     * @param mobileLink
+//     */
+//    public DailyForecast(String date, Integer epochDate, Temperature temperature, Day day, Night night, List<String> sources, String mobileLink, String link) {
+//        super();
+//        this.date = date;
+//        this.epochDate = epochDate;
+//        this.temperature = temperature;
+//        this.day = day;
+//        this.night = night;
+//        this.sources = sources;
+//        this.mobileLink = mobileLink;
+//        this.link = link;
+//    }
 //
 //    @JsonProperty("Date")
 //    public String getDate() {

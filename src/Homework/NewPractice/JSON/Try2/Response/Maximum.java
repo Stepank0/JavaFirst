@@ -5,12 +5,8 @@ package Homework.NewPractice.JSON.Try2.Response;
 import java.util.HashMap;
 import java.util.Map;
 import javax.annotation.Generated;
-import com.fasterxml.jackson.annotation.JsonAnyGetter;
-import com.fasterxml.jackson.annotation.JsonAnySetter;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+
+import com.fasterxml.jackson.annotation.*;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
@@ -18,11 +14,11 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
         "Unit",
         "UnitType"
 })
-@Generated("jsonschema2pojo")
+
 public class Maximum {
 
     @JsonProperty("Value")
-    private Float value;
+    private Double value;
     @JsonProperty("Unit")
     private String unit;
     @JsonProperty("UnitType")
@@ -30,33 +26,13 @@ public class Maximum {
     @JsonIgnore
     private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
-    /**
-     * No args constructor for use in serialization
-     *
-     */
-    public Maximum() {
-    }
-
-    /**
-     *
-     * @param unitType
-     * @param unit
-     * @param value
-     */
-    public Maximum(Float value, String unit, Integer unitType) {
-        super();
-        this.value = value;
-        this.unit = unit;
-        this.unitType = unitType;
-    }
-
     @JsonProperty("Value")
-    public Float getValue() {
+    public Double getValue() {
         return value;
     }
 
     @JsonProperty("Value")
-    public void setValue(Float value) {
+    public void setValue(Double value) {
         this.value = value;
     }
 
@@ -92,16 +68,7 @@ public class Maximum {
 
 }
 
-//
-//import java.util.HashMap;
-//import java.util.Map;
-//
-//import com.fasterxml.jackson.annotation.JsonAnyGetter;
-//import com.fasterxml.jackson.annotation.JsonAnySetter;
-//import com.fasterxml.jackson.annotation.JsonIgnore;
-//import com.fasterxml.jackson.annotation.JsonInclude;
-//import com.fasterxml.jackson.annotation.JsonProperty;
-//import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+
 //
 //@JsonInclude(JsonInclude.Include.NON_NULL)
 //@JsonPropertyOrder({
@@ -109,11 +76,11 @@ public class Maximum {
 //        "Unit",
 //        "UnitType"
 //})
-//
+//@Generated("jsonschema2pojo")
 //public class Maximum {
 //
 //    @JsonProperty("Value")
-//    private Double value;
+//    private Float value;
 //    @JsonProperty("Unit")
 //    private String unit;
 //    @JsonProperty("UnitType")
@@ -121,13 +88,33 @@ public class Maximum {
 //    @JsonIgnore
 //    private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 //
+//    /**
+//     * No args constructor for use in serialization
+//     *
+//     */
+//    public Maximum() {
+//    }
+//
+//    /**
+//     *
+//     * @param unitType
+//     * @param unit
+//     * @param value
+//     */
+//    public Maximum(Float value, String unit, Integer unitType) {
+//        super();
+//        this.value = value;
+//        this.unit = unit;
+//        this.unitType = unitType;
+//    }
+//
 //    @JsonProperty("Value")
-//    public Double getValue() {
+//    public Float getValue() {
 //        return value;
 //    }
 //
 //    @JsonProperty("Value")
-//    public void setValue(Double value) {
+//    public void setValue(Float value) {
 //        this.value = value;
 //    }
 //

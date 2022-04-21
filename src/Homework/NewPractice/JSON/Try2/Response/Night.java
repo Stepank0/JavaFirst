@@ -4,12 +4,9 @@ package Homework.NewPractice.JSON.Try2.Response;
 import java.util.HashMap;
 import java.util.Map;
 import javax.annotation.Generated;
-import com.fasterxml.jackson.annotation.JsonAnyGetter;
-import com.fasterxml.jackson.annotation.JsonAnySetter;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+
+import com.fasterxml.jackson.annotation.*;
+
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
@@ -17,7 +14,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
         "IconPhrase",
         "HasPrecipitation"
 })
-@Generated("jsonschema2pojo")
+
 public class Night {
 
     @JsonProperty("Icon")
@@ -29,24 +26,9 @@ public class Night {
     @JsonIgnore
     private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
-    /**
-     * No args constructor for use in serialization
-     *
-     */
-    public Night() {
-    }
-
-    /**
-     *
-     * @param hasPrecipitation
-     * @param icon
-     * @param iconPhrase
-     */
-    public Night(Integer icon, String iconPhrase, Boolean hasPrecipitation) {
-        super();
-        this.icon = icon;
-        this.iconPhrase = iconPhrase;
-        this.hasPrecipitation = hasPrecipitation;
+    @Override
+    public String toString() {
+        return ", ночью: " + iconPhrase;
     }
 
     @JsonProperty("Icon")
@@ -91,24 +73,13 @@ public class Night {
 
 }
 
-//
-//import java.util.HashMap;
-//import java.util.Map;
-//
-//import com.fasterxml.jackson.annotation.JsonAnyGetter;
-//import com.fasterxml.jackson.annotation.JsonAnySetter;
-//import com.fasterxml.jackson.annotation.JsonIgnore;
-//import com.fasterxml.jackson.annotation.JsonInclude;
-//import com.fasterxml.jackson.annotation.JsonProperty;
-//import com.fasterxml.jackson.annotation.JsonPropertyOrder;
-//
 //@JsonInclude(JsonInclude.Include.NON_NULL)
 //@JsonPropertyOrder({
 //        "Icon",
 //        "IconPhrase",
 //        "HasPrecipitation"
 //})
-//
+//@Generated("jsonschema2pojo")
 //public class Night {
 //
 //    @JsonProperty("Icon")
@@ -119,6 +90,26 @@ public class Night {
 //    private Boolean hasPrecipitation;
 //    @JsonIgnore
 //    private Map<String, Object> additionalProperties = new HashMap<String, Object>();
+//
+//    /**
+//     * No args constructor for use in serialization
+//     *
+//     */
+//    public Night() {
+//    }
+//
+//    /**
+//     *
+//     * @param hasPrecipitation
+//     * @param icon
+//     * @param iconPhrase
+//     */
+//    public Night(Integer icon, String iconPhrase, Boolean hasPrecipitation) {
+//        super();
+//        this.icon = icon;
+//        this.iconPhrase = iconPhrase;
+//        this.hasPrecipitation = hasPrecipitation;
+//    }
 //
 //    @JsonProperty("Icon")
 //    public Integer getIcon() {
