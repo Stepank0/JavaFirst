@@ -4,34 +4,62 @@ import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.Arrays;
 import java.util.Scanner;
+import java.util.stream.Stream;
 
 public class JavaRush {
 
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
+        String s = scan.nextLine();
+        int number = scan.nextInt();
 
-        int min1 = Integer.MAX_VALUE;
-        int min2 = Integer.MAX_VALUE;
-        while(scan.hasNextInt()){
-            int x = scan.nextInt();
-                if (x < min1) {
-                    min2 = min1;
-                    min1 = x;
-                }else if (min1 < x && x < min2){
-                    min2 = x;
 
-                }
-        }
+        do{
+            System.out.println(s);
+            number -=1;
+            if (number <= 0 || number >= 5) {
+                break;
+            }
+        } while (number > 0);
 
-        System.out.println(min2);
 
-        scan.close();
 
 
 
     }
+
     public static void something() {
+
+
+//piramida
+//        for(int i = 0; i < 10; i++){
+//            int line = 0;
+//            line += i;
+//            for(int j = 0; j <= line; j++){
+//                System.out.print("*");
+//            }
+//            System.out.println();
+//        }
+
+//        int min1 = Integer.MAX_VALUE;
+//        int min2 = Integer.MAX_VALUE;
+//        while(scan.hasNextInt()){
+//            int x = scan.nextInt();
+//            if (x < min1) {
+//                min2 = min1;
+//                min1 = x;
+//            }else if (min1 < x && x < min2){
+//                min2 = x;
+//
+//            }
+//        }
+//
+//        System.out.println(min2);
+//
+//        scan.close();
+
 
 //            Scanner scan = new Scanner(System.in);
 //
