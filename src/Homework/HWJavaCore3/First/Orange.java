@@ -1,7 +1,8 @@
-package Homework.HWJavaCore3;
+package Homework.HWJavaCore3.First;
 
-public class Apple extends Fruit {
-    public Apple(Float weight, String name) {
+public class Orange extends Fruit{
+
+    public Orange(Float weight, String name) {
         super(weight, name);
     }
 
@@ -15,12 +16,12 @@ public class Apple extends Fruit {
         return super.getName();
     }
 
-    //    public Apple() {
-//        super(1.0f);
+    //    public Orange() {
+//        super(1.5f);
 //    }
 //
 //    @Override
 //    public String toString() {
-//        return "Яблоки";
+//        return "Апельсинки ";
 //    }
 }

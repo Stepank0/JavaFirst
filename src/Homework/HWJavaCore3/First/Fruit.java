@@ -1,4 +1,4 @@
-package Homework.HWJavaCore3;
+package Homework.HWJavaCore3.First;
 
 abstract class Fruit {
     private Float weight;
