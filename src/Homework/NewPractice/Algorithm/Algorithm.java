@@ -1,4 +1,4 @@
-package Homework.NewPractice;
+package Homework.NewPractice.Algorithm;
 
 import java.util.Arrays;
 import java.util.Random;
@@ -94,10 +94,7 @@ public class Algorithm {
 
 
 
-    @Override
-    public boolean equals(Object obj) {
-        return super.equals(obj);
-    }
+
 
     public static void infoArraySelection (int[] array) {
         System.out.println(Arrays.toString(array));

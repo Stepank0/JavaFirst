@@ -5,24 +5,22 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Arrays;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 import java.util.stream.Stream;
 
 public class JavaRush {
 
     public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
-        String s = scan.nextLine();
-        int number = scan.nextInt();
+        double earthDiameter = 12742.0;
 
+        double x = earthDiameter;
+        double a = 0;
+        double s = 0;
 
-        do{
-            System.out.println(s);
-            number -=1;
-            if (number <= 0 || number >= 5) {
-                break;
-            }
-        } while (number > 0);
+        a = Math.pow(10 , -4);
+        s = x*a;
+        System.out.println(s);
 
 
 
@@ -31,6 +29,61 @@ public class JavaRush {
     }
 
     public static void something() {
+
+
+//        Scanner scan = new Scanner(System.in);
+//
+//      calculate s triangle
+//
+//        while (scan.hasNextInt()) {
+//            int a = scan.nextInt();
+//            int b = scan.nextInt();
+//            int c = scan.nextInt();
+//
+//            if ((a+b)>c && (a+c)>b && (b+c)>a && a > 0 && b > 0 && c > 0) {
+//                double p = (double) ((a + b + c) / 2.0);
+//                double S = (double) (Math.sqrt(p * (p - a) * (p - b) * (p - c)));
+//                System.out.println(S);
+//                break;
+//            } else if( (a+b)<c && (a+c)<b && (b+c)<a ) {
+//                System.out.println("важное условие существование треугольника, \n" +
+//                        " сумма двух сторон должна быть больше третей стороны  \n" +
+//                        "Ваш треугольник не существует");
+//            }else {
+//                System.out.println(" Стороны должны быть больше 0 ");
+//            }
+//        }
+
+//        double glass = 0.5;
+//        int result = 0;
+//        Scanner scan = new Scanner(System.in);
+//
+//        try {
+//            boolean whoAreYou = scan.nextBoolean();
+//            if (whoAreYou == true){
+//                result = (int) Math.ceil(glass);
+//                System.out.println(result);
+//            } else if(whoAreYou == false) {
+//                result = (int) Math.floor(glass);
+//                System.out.println(result);
+//            }
+//        } catch (InputMismatchException e) {
+//            System.out.println("Invalid input!");
+//        }
+
+
+//        Scanner scan = new Scanner(System.in);
+//        String s = scan.nextLine();
+//        int number = scan.nextInt();
+//
+//
+//        do{
+//            System.out.println(s);
+//            number -=1;
+//            if (number <= 0 || number >= 5) {
+//                break;
+//            }
+//        } while (number > 0);
 
 
 //piramida

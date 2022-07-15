@@ -19,17 +19,26 @@ public class SomethingBox {
 
         public static void main(String[] args) {
 
-            SomethingBox box1 = new SomethingBox(43.3);
-            SomethingBox box2 = new SomethingBox(23);
+//            SomethingBox box1 = new SomethingBox(43.3);
+//            SomethingBox box2 = new SomethingBox(23);
+//
+//            if (box1.getObj() instanceof Integer && box2.getObj() instanceof Integer) {
+//                int sum = (Integer)box1.getObj() + (Integer)box2.getObj();
+//                System.out.println(sum);
+//            } else {
+//                System.out.println(" вводимые данные не int и не просумируются");
+//            }
+            System.out.println(abs(2));
 
-            if (box1.getObj() instanceof Integer && box2.getObj() instanceof Integer) {
-                int sum = (Integer)box1.getObj() + (Integer)box2.getObj();
-                System.out.println(sum);
-            } else {
-                System.out.println(" вводимые данные не int и не просумируются");
-            }
 
+        }
 
+        public static int abs ( int power){
+            int result = 2 << power;
+
+            result = result >> 2;
+
+            return result;
         }
     }
 
