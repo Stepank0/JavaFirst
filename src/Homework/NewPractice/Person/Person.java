@@ -29,4 +29,10 @@ public class Person {
     public void talk () {
         System.out.println(fullName + " something talk.");
     }
+
+    public void sayHi(String...names){
+        for(String name : names){
+            System.out.println("Добрый вечер, " + name + ", как ваши дела?");
+        }
+    }
 }

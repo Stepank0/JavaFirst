@@ -1,5 +1,7 @@
 package Homework.NewPractice;
 
+import java.util.Arrays;
+
 public class SomethingBox {
     private Object obj;
 
@@ -29,6 +31,13 @@ public class SomethingBox {
 //                System.out.println(" вводимые данные не int и не просумируются");
 //            }
             System.out.println(abs(2));
+            String binaryNumber = "1111111111111111111111111111111";
+            String binaryNumber2 = "1111111111111111111111111111111";
+            System.out.println(Arrays.toString((binaryNumber.toCharArray())));
+            int s = binaryNumber.compareTo(binaryNumber2);
+            System.out.println(s);
+
+
 
 
         }
