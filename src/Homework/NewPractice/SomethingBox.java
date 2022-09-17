@@ -30,13 +30,20 @@ public class SomethingBox {
 //            } else {
 //                System.out.println(" вводимые данные не int и не просумируются");
 //            }
-            System.out.println(abs(2));
-            String binaryNumber = "1111111111111111111111111111111";
-            String binaryNumber2 = "1111111111111111111111111111111";
-            System.out.println(Arrays.toString((binaryNumber.toCharArray())));
-            int s = binaryNumber.compareTo(binaryNumber2);
-            System.out.println(s);
+//            System.out.println(abs(2));
+//            String binaryNumber = "1111111111111111111111111111111";
+//            String binaryNumber2 = "1111111111111111111111111111111";
+//            System.out.println(Arrays.toString((binaryNumber.toCharArray())));
+//            int s = binaryNumber.compareTo(binaryNumber2);
+//            System.out.println(s);
 
+            int s = 348;
+            String sd = Integer.toBinaryString(s);
+            System.out.println(sd);
+            sd = Integer.toHexString(s);
+            System.out.println(sd);
+            sd = Integer.toOctalString(s);
+            System.out.println(sd);
 
 
 

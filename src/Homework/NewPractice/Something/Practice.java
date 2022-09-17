@@ -7,5 +7,8 @@ public class Practice {
         Cat cat1 = new Cat( 12, "Barsic");
         cat1.Info(cat1);
 
+        String s = "".valueOf(12);
+        System.out.println(s);
+
     }
 }

@@ -1,5 +1,7 @@
 package Homework.NewPractice.Phone;
 
+import java.util.Objects;
+
 public class Phone {
     private String model;
     private int number;
@@ -20,10 +22,6 @@ public class Phone {
         this.weight = weight;
 
     }
-
-
-
-
 
     public String getModel() {
         return model;
@@ -52,5 +50,18 @@ public class Phone {
         System.out.println(receive);
         return receive ;
 
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Phone)) return false;
+        Phone phone = (Phone) o;
+        return getNumber() == phone.getNumber() && getWeight() == phone.getWeight() && getModel().equals(phone.getModel());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getModel(), getNumber(), getWeight());
     }
 }
