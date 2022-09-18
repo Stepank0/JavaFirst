@@ -8,10 +8,24 @@ public class listsPractice {
 
     public static void main(String[] args) {
 
+        ArrayList<Integer> list = new ArrayList<>();
+        for(int i = 0; i < 20; i++){
+            if(i%2 == 0){
+                list.add(i);
+            }
+        }
+        print(list);
 
+        list.removeIf( x-> (x%4 ==0));
 
+        print(list);
 
+    }
 
+    public static void print(ArrayList<Integer> list){
+        for (Object o : list){
+            System.out.println(o);
+        }
 
     }
 

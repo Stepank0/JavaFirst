@@ -10,5 +10,10 @@ public class Practice {
         String s = "".valueOf(12);
         System.out.println(s);
 
+        int a = 10;
+        a = (int) (a *1.5);
+        System.out.println(a);
+
+
     }
 }
