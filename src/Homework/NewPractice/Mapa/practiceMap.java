@@ -3,6 +3,7 @@ package Homework.NewPractice.Mapa;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
+import java.util.Set;
 
 public class practiceMap {
 
@@ -14,7 +15,7 @@ public class practiceMap {
         map.put(2, "second");
         map.put(3, "third");
 
-//        mapPract(map);
+        mapPract(map);
 
 
 
@@ -39,6 +40,7 @@ public class practiceMap {
             String value = entry.getValue();
             System.out.println(key + " : " + value);
         }
+
 
     }
 }
