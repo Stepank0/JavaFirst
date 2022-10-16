@@ -50,10 +50,7 @@ public class exsComparator {
     }
 
     public static void print(ArrayList<String> arrayList){
-        for(String str : arrayList){
-            System.out.print(str);
-
-        }
+        arrayList.forEach( (s) -> System.out.print(s));
         System.out.println();
     }
 }
