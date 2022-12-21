@@ -1,9 +1,9 @@
-package Homework.NewPractice.FactoryMethodPattern;
+package Homework.NewPractice.Pattern.FactoryMethodPattern;
 
-import Homework.NewPractice.FactoryMethodPattern.StyleCoffe.ItalianStyleAmericano;
-import Homework.NewPractice.FactoryMethodPattern.StyleCoffe.ItalianStyleCaffeLatte;
-import Homework.NewPractice.FactoryMethodPattern.StyleCoffe.ItalianStyleCappuccino;
-import Homework.NewPractice.FactoryMethodPattern.StyleCoffe.ItalianStyleEspresso;
+import Homework.NewPractice.Pattern.FactoryMethodPattern.StyleCoffe.ItalianStyleAmericano;
+import Homework.NewPractice.Pattern.FactoryMethodPattern.StyleCoffe.ItalianStyleCaffeLatte;
+import Homework.NewPractice.Pattern.FactoryMethodPattern.StyleCoffe.ItalianStyleCappuccino;
+import Homework.NewPractice.Pattern.FactoryMethodPattern.StyleCoffe.ItalianStyleEspresso;
 
 public class ItalianCoffeeShop extends CoffeeShop {
     @Override

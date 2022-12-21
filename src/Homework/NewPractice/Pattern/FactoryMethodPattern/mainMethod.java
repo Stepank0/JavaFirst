@@ -1,4 +1,4 @@
-package Homework.NewPractice.FactoryMethodPattern;
+package Homework.NewPractice.Pattern.FactoryMethodPattern;
 
 
 public class mainMethod {

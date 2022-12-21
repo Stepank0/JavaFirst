@@ -1,6 +1,6 @@
-package Homework.NewPractice.FactoryMethodPattern.StyleCoffe;
+package Homework.NewPractice.Pattern.FactoryMethodPattern.StyleCoffe;
 
-import Homework.NewPractice.FactoryMethodPattern.Coffee;
+import Homework.NewPractice.Pattern.FactoryMethodPattern.Coffee;
 
 public class ItalianStyleCappuccino extends Coffee
 {
