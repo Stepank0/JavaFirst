@@ -1,4 +1,4 @@
-package Homework.NewPractice.Pattern.DecoratorPattern;
+package Homework.NewPractice.Pattern.WrapperPattern;
 
 public class Cat {
 
