@@ -1,4 +1,4 @@
-package Homework.NewPractice.CRUD;
+package Homework.NewPractice.CRUD.ProductsInTables;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -8,24 +8,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CreateProductForTable {
-    public static class Product {
-        int id;
-        String name;
-        String price;
-        String quantity;
-
-        public Product(int id, String name, String price, String quantity) {
-            this.id = id;
-            this.name = name;
-            this.price = price;
-            this.quantity = quantity;
-        }
-
-        @Override
-        public String toString() {
-            return String.format("%-8d%-30s%-8s%-4s", id, name, price, quantity);
-        }
-    }
 
     public static void main(String[] args) throws Exception {
         if (args.length == 0) {
@@ -45,7 +27,7 @@ public class CreateProductForTable {
         }
 
         switch (args[0]) {
-            case "-c":
+            case "-c": {
                 int id = 0;
                 for (Product product : products) {
                     if (product.id > id) id = product.id;
@@ -70,6 +52,62 @@ public class CreateProductForTable {
                     fileWriter.write("\n");
                     fileWriter.write(product.toString());
                 }
+            }
+            case "-u": {
+                int id = Integer.parseInt(args[1]);
+
+                String name = "";
+                for (int i = 2; i < args.length - 2; i++) {
+                    name += args[i] + " ";
+                }
+                if (name.length() > 30) {
+                    name.substring(0, 30);
+                }
+
+                String price = args[args.length - 2];
+                if (price.length() > 8) {
+                    price.substring(0, 8);
+                }
+
+                String quantity = args[args.length - 1];
+                if (quantity.length() > 4) {
+                    quantity.substring(0, 4);
+                }
+
+                Product productToUpdate = null;
+                for (Product product : products) {
+                    if (product.id == id) {
+                        productToUpdate = product;
+                    }
+                }
+
+                if (productToUpdate != null) {
+                    productToUpdate.name = name;
+                    productToUpdate.price = price;
+                    productToUpdate.quantity = quantity;
+                }
+                break;
+            }
+            case "-d": {
+                int id = Integer.parseInt(args[1]);
+                Product productForDelete = null;
+                for (Product product : products) {
+                    if (product.id == id) {
+                        productForDelete = product;
+                    }
+                }
+                if (productForDelete != null) {
+                    products.remove(productForDelete);
+                }
+                break;
+            }
+        }
+
+        try (FileWriter writer = new FileWriter(fileName)) {
+            for (Product product : products) {
+                writer.write(product.toString());
+                writer.write("\n");
+            }
         }
     }
 
