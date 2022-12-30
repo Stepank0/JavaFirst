@@ -53,6 +53,17 @@ public class CreateProductForTable {
                     fileWriter.write(product.toString());
                 }
             }
+            case "-r":{
+                int id = Integer.parseInt(args[1]);
+                Product productForRead = null;
+                for (Product product : products) {
+                    if (product.id == id) {
+                        productForRead = product;
+                    }
+                }
+
+                System.out.println(productForRead.toString());
+            }
             case "-u": {
                 int id = Integer.parseInt(args[1]);
 
